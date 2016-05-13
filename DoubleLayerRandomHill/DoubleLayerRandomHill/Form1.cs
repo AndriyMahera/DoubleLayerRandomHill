@@ -13,8 +13,9 @@ namespace DoubleLayerRandomHill
 {
     public partial class Form1 : Form
     {
-        private List<int> random = new List<int>(),digit=new List<int>(),encrypted=new List<int>(),decrypted=new List<int>();
-        private List<int> random2 = new List<int>(), encrypted2 = new List<int>(), decrypted2 = new List<int>();
+        private List<int> digit=new List<int>(),encrypted=new List<int>(),decrypted=new List<int>();
+        private List<int>  encrypted2 = new List<int>(), 
+            decrypted2 = new List<int>(),encryptedF=new List<int>(),encrypted2F=new List<int>();
         private Dictionary<string, int> dict = new Dictionary<string, int>();
         private string mainstring;
         private double[,] KeyMatrix = { { 12, 0, 7, 4 }, { 17, 14, 21, 18 }, { 10, 24, 0, 13 }, { 3, 17, 8, 24 } };
@@ -31,6 +32,7 @@ namespace DoubleLayerRandomHill
 
         private void Perform_Click(object sender, EventArgs e)
         {
+            List<int> random = new List<int>(), random2 = new List<int>();
             mainstring = richTextBox1.Text.Length==0? File.ReadAllText("C_C_VT00"):richTextBox1.Text;
             Preparation.FilterText(ref mainstring);
             dict = Preparation.UniquesDict(mainstring,1);
@@ -38,21 +40,28 @@ namespace DoubleLayerRandomHill
             richTextBox1.Text = mainstring;
             digit = Preparation.FormDigitString(mainstring);
             encrypted = Code.HillPlusRandomEncrypt(digit,KeyMatrix,Alphabet.Length, random);
-            richTextBox2.Text = Preparation.FormStringFromDigit(encrypted).ToString();
+            int[] count = Preparation.CalcRandomList(random);
+            List<int> maskedR = Preparation.FormMaskedRandomList(random);
+            encryptedF.AddRange(count); encryptedF.AddRange(maskedR); encryptedF.AddRange(encrypted);
+            richTextBox2.Text = Preparation.FormStringFromDigit(encryptedF).ToString();
 
 
             Decrypt.Enabled = true;
 
-            Preparation.ColorText(richTextBox1, random, KeyMatrix.GetLength(0),Color.Yellow);
-            Preparation.ColorText(richTextBox2, random, KeyMatrix.GetLength(0), Color.Yellow);
+            Preparation.ColorText(richTextBox1, random, KeyMatrix.GetLength(0),Color.Yellow,0);
+            Preparation.ColorText(richTextBox2, random, KeyMatrix.GetLength(0), Color.Yellow, count.Length + maskedR.Count);
 
 
-            richTextBox3.Text = Preparation.FormStringFromDigit(encrypted).ToString();
-            encrypted2 = Code.HillPlusRandomEncrypt(encrypted,SKeyMatrix,Alphabet.Length,random2);
-            richTextBox4.Text = Preparation.FormStringFromDigit(encrypted2).ToString();
+            richTextBox3.Text = Preparation.FormStringFromDigit(encryptedF).ToString();
+            encrypted2 = Code.HillPlusRandomEncrypt(encryptedF,SKeyMatrix,Alphabet.Length,random2);
+            int[] count2 = Preparation.CalcRandomList(random2);
+            List<int> maskedR2 = Preparation.FormMaskedRandomList(random2);
+            encrypted2F.AddRange(count2); encrypted2F.AddRange(maskedR2); encrypted2F.AddRange(encrypted2);
 
-            Preparation.ColorText(richTextBox3, random2, SKeyMatrix.GetLength(0), Color.Blue);
-            Preparation.ColorText(richTextBox4, random2, SKeyMatrix.GetLength(0), Color.Blue);
+            richTextBox4.Text = Preparation.FormStringFromDigit(encrypted2F).ToString();
+
+            Preparation.ColorText(richTextBox3, random2, SKeyMatrix.GetLength(0), Color.Blue, 0);
+            Preparation.ColorText(richTextBox4, random2, SKeyMatrix.GetLength(0), Color.Blue, count2.Length + maskedR2.Count);
             
         }
 
@@ -81,8 +90,19 @@ namespace DoubleLayerRandomHill
             }
             InverseMatrix = MathOperations.FormInverseMatrix(KeyMatrix, d, Alphabet.Length);
             SInverseMatrix = MathOperations.FormInverseMatrix(SKeyMatrix,d2,Alphabet.Length);
+
+            int count2 = Convert.ToInt32(String.Concat(encrypted2F.Take(Preparation.SYMBOLS_FOR_LEN)));
+            List<int> random2 = Preparation.FormUnmaskedRandomList(encrypted2F.Skip(Preparation.SYMBOLS_FOR_LEN).Take(count2).ToList());
+            encrypted2 = encrypted2F.Skip(Preparation.SYMBOLS_FOR_LEN + random2.Count).ToList();
+
             decrypted2 = Code.HillPlusRandomDecrypt(encrypted2,SInverseMatrix,Alphabet.Length,random2);
-            decrypted = Code.HillPlusRandomDecrypt(decrypted2, InverseMatrix, Alphabet.Length, random);
+
+            int count = Convert.ToInt32(String.Concat(decrypted2.Take(Preparation.SYMBOLS_FOR_LEN)));
+            List<int> random = Preparation.FormUnmaskedRandomList(decrypted2.Skip(Preparation.SYMBOLS_FOR_LEN).Take(count).ToList());
+            decrypted = decrypted2.Skip(Preparation.SYMBOLS_FOR_LEN + random.Count).ToList();
+
+            decrypted = Code.HillPlusRandomDecrypt(decrypted, InverseMatrix, Alphabet.Length, random);
+            
 
             richTextBox5.Text = Preparation.FormStringFromDigit(decrypted).ToString();
             

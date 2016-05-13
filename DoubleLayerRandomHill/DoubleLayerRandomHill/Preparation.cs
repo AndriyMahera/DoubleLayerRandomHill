@@ -12,7 +12,7 @@ namespace DoubleLayerRandomHill
     public static class Preparation
     {
         public const string alphabet = Form1.Alphabet;
-        private const int SYMBOLS_FOR_LEN= 6;
+        public const int SYMBOLS_FOR_LEN= 6;
         public  const int BASE=5;
         private static Random rnd=new Random();
         
@@ -70,9 +70,9 @@ namespace DoubleLayerRandomHill
             }
         }
         //замалювати пробіли рандомні
-        public static void ColorText(RichTextBox rtb,List<int> random,int order,Color color)
+        public static void ColorText(RichTextBox rtb,List<int> random,int order,Color color,int shift)
         {
-            int sum=order;
+            int sum=order+shift;
             foreach (int el in random)
             {
                 rtb.Select(sum,el);
@@ -112,8 +112,17 @@ namespace DoubleLayerRandomHill
         //знайти підходяще хєрове число
         public static int FindMaskNumber()
         {
-            int res=rnd.Next(0,256);
+            int res=rnd.Next(0,alphabet.Length-BASE);
             return res%BASE==0?res:FindMaskNumber();
+        }
+        //спотворити рандомний список
+        public static List<int> FormMaskedRandomList(List<int> rand)
+        {
+            return rand.Select(x=>x+FindMaskNumber()).ToList();
+        }
+        public static List<int> FormUnmaskedRandomList(List<int> masked)
+        {
+            return masked.Select(x => x % BASE).ToList();
         }
     }
 }
