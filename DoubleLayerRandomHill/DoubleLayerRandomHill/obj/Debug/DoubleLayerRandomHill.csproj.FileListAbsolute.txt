@@ -10,3 +10,12 @@ c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHil
 C:\Users\AndriyMahera\Documents\Visual Studio 2012\GitHub\DoubleLayerRandomHill\DoubleLayerRandomHill\bin\Debug\DoubleLayerRandomHill.exe.config
 C:\Users\AndriyMahera\Documents\Visual Studio 2012\GitHub\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.exe
 C:\Users\AndriyMahera\Documents\Visual Studio 2012\GitHub\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.pdb
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\bin\Debug\DoubleLayerRandomHill.exe.config
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.exe
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.pdb
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\bin\Debug\DoubleLayerRandomHill.exe
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\bin\Debug\DoubleLayerRandomHill.pdb
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.csprojResolveAssemblyReference.cache
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.Form1.resources
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.Properties.Resources.resources
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\DoubleLayerRandomHill\obj\Debug\DoubleLayerRandomHill.csproj.GenerateResource.Cache

@@ -48,5 +48,23 @@ namespace UnitTestPreparation
 
             Assert.AreEqual(true,hg,"");
         }
+        [TestMethod]
+        public void TestCalcOfLen()
+        {
+            List<int> rand = Enumerable.Range(0, 211).ToList();
+            int[] actual = Preparation.CalcRandomList(rand);
+            int[] expected = new[] { 0, 0, 0, 2, 1, 1 };
+            bool isEqual = actual.SequenceEqual(expected);
+            Assert.AreEqual(isEqual,true,"Loozer");
+        }
+        [TestMethod]
+        public void TestMaskNumver()
+        {
+            List<int> list = Enumerable.Range(0, 500).Select(x => Preparation.FindMaskNumber()).ToList();
+            bool isOk = list.All(x=>x%Preparation.BASE==0);
+
+            Assert.AreEqual(isOk,true,"Loozer");
+        }
+    
     }
 }

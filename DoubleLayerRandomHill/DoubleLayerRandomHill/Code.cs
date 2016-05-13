@@ -8,6 +8,7 @@ namespace DoubleLayerRandomHill
 {
     public static class Code
     {
+        private const int BASE = 5;
         public static List<int> HillPlusRandomEncrypt(List<int> list, double[,] matrix, int alphabet,List<int> random)
         {
             random.Clear();
@@ -31,7 +32,7 @@ namespace DoubleLayerRandomHill
                 reserve.RemoveRange(0,order);
                 if (reserve.Count != 0)
                 {
-                    int ran = rnd.Next(0, 5);
+                    int ran = rnd.Next(0, BASE);
                     ran = ran > reserve.Count ? reserve.Count : ran;
                     outList.AddRange(reserve.Take(ran));
                     random.Add(ran);

@@ -21,6 +21,8 @@ namespace DoubleLayerRandomHill
         private double[,] SKeyMatrix = { {1,2,1,7,1},{2,3,4,5,6},{1,2,8,3,4},{5,4,3,2,1},{6,7,5,4,2}};
         private double[,] InverseMatrix,SInverseMatrix;
         public  const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ .,;-'";
+        private string lenOfRandom;
+        
 
         public Form1()
         {

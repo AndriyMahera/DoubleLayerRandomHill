@@ -5,3 +5,10 @@ c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHil
 c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\DoubleLayerRandomHill.pdb
 c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.dll
 c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.pdb
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\UnitTestPreparation.dll
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\UnitTestPreparation.pdb
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\DoubleLayerRandomHill.exe
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\DoubleLayerRandomHill.pdb
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.csprojResolveAssemblyReference.cache
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.dll
+C:\Users\AndriyMahera\Documents\Visual Studio 2012\Git\DoubleLayerRandomHill\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.pdb

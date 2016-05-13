@@ -12,6 +12,10 @@ namespace DoubleLayerRandomHill
     public static class Preparation
     {
         public const string alphabet = Form1.Alphabet;
+        private const int SYMBOLS_FOR_LEN= 6;
+        public  const int BASE=5;
+        private static Random rnd=new Random();
+        
         //count amount of symbols(bi,-threegrams)
         public static Dictionary<string, int> UniquesDict(string str,int amount)
         {
@@ -93,6 +97,23 @@ namespace DoubleLayerRandomHill
                 }
             }
             text = sbuild.ToString();
+        }
+        //сформувати рядок,що буде позначати кількість елементів в списку рандомів
+        public static int[] CalcRandomList(List<int> rand)
+        {
+            int []result = new int[SYMBOLS_FOR_LEN];
+            string str = rand.Count.ToString();
+            if (str.Length > SYMBOLS_FOR_LEN)
+                throw new ArgumentException("Your random list is too long");
+            int[] part2 = str.Select(x => (int)Char.GetNumericValue(x)).ToArray();
+            int[] part1 = Enumerable.Range(0,SYMBOLS_FOR_LEN-str.Length).Select(x=>0).ToArray();
+            return part1.Concat(part2).ToArray();
+        }
+        //знайти підходяще хєрове число
+        public static int FindMaskNumber()
+        {
+            int res=rnd.Next(0,256);
+            return res%BASE==0?res:FindMaskNumber();
         }
     }
 }
