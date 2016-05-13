@@ -1,0 +1,7 @@
+c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.csprojResolveAssemblyReference.cache
+c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\UnitTestPreparation.dll
+c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\UnitTestPreparation.pdb
+c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\DoubleLayerRandomHill.exe
+c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\bin\Debug\DoubleLayerRandomHill.pdb
+c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.dll
+c:\users\andriymahera\documents\visual studio 2012\Projects\DoubleLayerRandomHill\UnitTestPreparation\obj\Debug\UnitTestPreparation.pdb
